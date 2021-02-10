@@ -46,19 +46,19 @@ exit
 
 ### Available algorithms
 
-- immunedeconv
-- estimate
-- CellMix
-- DeconRNASeq
+immunedeconv\
+estimate\
+CellMix\
+DeconRNASeq\
 
-- EpiDISH
-- EDec
-- medepir
+EpiDISH\
+EDec\
+medepir\
 
-- ica
-- deconica
-- fastICA
-- NMF
+ica\
+deconica\
+fastICA\
+NMF\
 
 ### Connecting this docker image with `ShinyCompExplore` and running the app
 
