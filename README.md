@@ -1,6 +1,6 @@
 # mrna_meth_decon
 
-> NOTE: Always change `ashwinikrsharma` to your own Dockerhub ID in all instance below
+> NOTE: If you don't want to build the Docker image yourself, directly go to the last section.
 
 ### Create a Docker image
 
@@ -65,14 +65,16 @@ exit
 [`ShinyCompExplore`](https://github.com/ashwini-kr-sharma/ShinyCompExplore) is a Shiny app that aids in a user-friendly analysis and visualization of various deconvolution algorithms.
 
 ```
-# cd <any root directory>, note the directory mrna_meth_decon
-# should also be in this location, in our case -
-
 cd ~/
+
+# In case you didn't build the Docker image following the steps above,
+# you can directly pull the built image from dockerhub
+
+docker pull ashwinikrsharma/mrna_meth_decon
 
 git clone https://github.com/ashwini-kr-sharma/ShinyCompExplore.git
 
-docker run --rm -it -p 3838:3838 -v ~/mrna_meth_decon:/srv/shiny-server/ ashwinikrsharma/mrna_meth_decon
+docker run --rm -it -p 3838:3838 -v ~/ShinyCompExplore:/srv/shiny-server/ ashwinikrsharma/mrna_meth_decon
 
 # Wait for few seconds for the shiny app to start
 
