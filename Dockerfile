@@ -43,24 +43,3 @@ RUN R -e "remotes::install_github(repo = 'bcm-uga/medepir', upgrade = 'always')"
 #RUN R -e "BiocManager::install(pkgs = c('Rhtslib', 'RnBeads'))"
 #RUN R -e "BiocManager::install(pkgs = c('RnBeads'))"
 #RUN R -e "remotes::install_github(repo = 'lutsik/MeDeCom',  upgrade = 'always')"
-
-#-------------------------------------------------------------------------------
-# If the docker image is created successfully, enter it and check if all packages
-# are present there
-#-------------------------------------------------------------------------------
-
-# docker run --rm -it ashwinikrsharma/mrna_meth_decon:latest bash
-# R
-
-# ip = as.data.frame(installed.packages()[,c(1,3:4)])
-# ip = ip[is.na(ip$Priority),1:2,drop=FALSE]
-
-#mypacakages = c('DeconRNASeq','EpiDISH', 'csSAM', 'shinythemes', 'shinyjs', 'shinyWidgets',
-#'data.table', 'plotly', 'DT', 'waiter','estimate', 'ica', 'fastICA', 'NMF', 'fgsea', 'enrichR', 'pheatmap',
-#'immunedeconv', 'deconica', 'EDec', 'MeDeCom', 'medepir', 'CellMix', 'nFactors', 'cowplot')
-
-# All available !
-# ip[ip$Package %in% mypacakages,]
-
-# All missing !
-# mypacakages[! mypacakages %in% ip$Package]
